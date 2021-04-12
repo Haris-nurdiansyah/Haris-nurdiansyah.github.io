@@ -104,8 +104,9 @@ section {
   transform: translate(0px, 0px);
 }
 .text-about {
-  transform: translate(250px, -100px);
+  transform: translate(20px, -100px);
   transition: all 2s ease;
+  overflow: hidden !important;
   opacity: 0;
 }
 .text-about.muncul {
@@ -170,7 +171,7 @@ h3 {
 }
 .the-project {
   opacity: 0;
-  transform: translate(200px, -150px);
+  transform: translate(20px, -100px);
   transition: all 1s ease;
 }
 .the-project.muncul {
