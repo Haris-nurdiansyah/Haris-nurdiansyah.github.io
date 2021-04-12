@@ -1,0 +1,217 @@
+/* ---- particles.js container ---- */
+
+.jumbotron {
+  background-color: #e2edff;
+  color: #eaeaea;
+  overflow: hidden;
+  margin-top: 1%;
+  filter: grayscale(1);
+  opacity: 0.9;
+  background-attachment: fixed;
+  width: 100%;
+  height: calc(17rem + 20vw);
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+
+@media (max-width: 767px) {
+  #content-jumb {
+    padding-top: 20% !important;
+    padding-bottom: 20% !important;
+    text-align: center;
+    padding-left: 11% !important;
+  }
+  #img-profile {
+    display: none;
+  }
+  .btn-contactMe {
+    margin-top: 100%;
+  }
+}
+
+.jumbotron h1 {
+  font-family: "Spectral", serif;
+  font-size: calc(1rem + 2.5vw);
+  transition: all 0.1s ease;
+}
+#content-jumb {
+  position: absolute;
+  padding-top: 7%;
+}
+
+.jumbotron p span {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: all 0.1s ease;
+}
+.jumbotron p {
+  transition: all 0.1s ease;
+  font-size: calc(1px + 1.5vw);
+}
+.jumbotron img {
+  transition: all 0.1s ease;
+}
+.btn-contactMe {
+  font-family: "arial", serif;
+  border-radius: 17px;
+  padding: 2%;
+  background-color: rgba(255, 255, 255, 0.4);
+  letter-spacing: 3px;
+  font-size: calc(0.7px + 0.8vw);
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.1s ease;
+}
+.btn-contactMe:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  font-size: calc(0.9px + 1vw);
+}
+
+h2 {
+  font-family: "Spectral", serif !important;
+  font-size: calc(1.3rem + 1vw);
+  margin-bottom: -0.7rem;
+  transition: all 0.3s ease;
+}
+h2 {
+  font-family: "Spectral", serif !important;
+  font-size: calc(1.3rem + 1vw);
+  margin-bottom: -0.7rem;
+  transition: all 0.3s ease;
+}
+h2.resize {
+  font-size: calc(1.5rem + 1.2vw) !important;
+}
+
+section {
+  padding-top: 4rem;
+}
+
+#about {
+  margin-bottom: 4rem !important;
+}
+#about p {
+  font-size: calc(1px + 1.5vw);
+}
+.img-profile {
+  filter: grayscale(1);
+  transform: translate(-200px, -50px);
+  transition: all 2s ease;
+  opacity: 0;
+}
+.img-profile.muncul {
+  opacity: 0.9;
+  transform: translate(0px, 0px);
+}
+.text-about {
+  transform: translate(250px, -100px);
+  transition: all 2s ease;
+  opacity: 0;
+}
+.text-about.muncul {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+#skills {
+  color: #eaeaea !important;
+  overflow: hidden;
+  background-attachment: fixed;
+  width: 100%;
+  padding-bottom: 5rem !important;
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+}
+h3 {
+  font-family: "Spectral", serif !important;
+  font-size: calc(0.6rem + 1vw) !important;
+}
+.php-img {
+  margin: 1rem;
+}
+@media (max-width: 767px) {
+  .php-img {
+    width: 58px !important;
+    margin: 0.4rem;
+  }
+  .js-img {
+    width: 40px !important;
+  }
+  .html-img {
+    width: 45px !important;
+  }
+  .css-img {
+    width: 44px !important;
+  }
+}
+@media (max-width: 1183px) and (min-width: 767px) {
+  .php-img {
+    width: 76px !important;
+    margin: 0.5rem;
+  }
+  .js-img {
+    width: 50px !important;
+  }
+  .html-img {
+    width: 60px !important;
+  }
+  .css-img {
+    width: 57px !important;
+  }
+}
+.img-skills {
+  opacity: 0;
+  transform: translate(-100px, -100px);
+  transition: all 1s ease;
+}
+.img-skills.muncul {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.the-project {
+  opacity: 0;
+  transform: translate(200px, -150px);
+  transition: all 1s ease;
+}
+.the-project.muncul {
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+#contact {
+  background-color: #ced6e0;
+}
+
+footer {
+  background-color: #212529;
+}
+
+.navbar-brand {
+  font-size: 20px;
+  transition: all 0.4s ease;
+}
+.navbar-brand.resize {
+  font-size: 25px;
+}
+hr {
+  border: 2px solid #343a40 !important;
+  width: 12rem;
+  opacity: 1;
+}
+
+.top a {
+  opacity: 0;
+  position: fixed;
+  bottom: 30px;
+  z-index: 99; /* Make sure it does not overlap */
+  right: 30px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.9);
+  transition: 0.5s ease-in;
+}
+.top a.muncul {
+  opacity: 1;
+}
+/* {} */
