@@ -132,17 +132,17 @@ h3 {
 }
 @media (max-width: 767px) {
   .php-img {
-    width: 58px !important;
+    width: 44px !important;
     margin: 0.4rem;
   }
   .js-img {
-    width: 40px !important;
+    width: 32px !important;
   }
   .html-img {
-    width: 45px !important;
+    width: 33px !important;
   }
   .css-img {
-    width: 44px !important;
+    width: 33px !important;
   }
 }
 @media (max-width: 1183px) and (min-width: 767px) {
