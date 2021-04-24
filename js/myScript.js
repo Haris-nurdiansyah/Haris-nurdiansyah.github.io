@@ -47,6 +47,10 @@ function animateSection(section) {
       }, 500 * i);
     }
   }
+
+  if (section.id === "contact") {
+    const elementInput = section.querySelector(".element-input");
+  }
 }
 
 function returnTop(btnTop, scroll) {
@@ -76,9 +80,11 @@ window.addEventListener("scroll", function () {
   titleJumbotron.style.letterSpacing = wScroll / 160 + "px";
 
   // paragraph
-  const pJumbotron = document.querySelector(".jumbotron p");
-  pJumbotron.style.transform = `translate(0px, ${wScroll / 100}%)`;
-  pJumbotron.style.letterSpacing = wScroll / 400 + "px";
+  const pJumbotron = document.querySelectorAll(".jumbotron span");
+  pJumbotron.forEach((e) => {
+    e.style.transform = `translate(0px, ${wScroll / 100}%)`;
+    e.style.letterSpacing = wScroll / 400 + "px";
+  });
 
   // a
   const aJumbotron = document.querySelector(".btn-contactMe");
@@ -92,3 +98,5 @@ window.addEventListener("scroll", function () {
   const btnTop = document.querySelector(".top a");
   returnTop(btnTop, wScroll);
 });
+
+// [0]

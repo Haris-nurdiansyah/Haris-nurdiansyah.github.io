@@ -4,7 +4,6 @@
   background-color: #e2edff;
   color: #eaeaea;
   overflow: hidden;
-  margin-top: 1%;
   filter: grayscale(1);
   opacity: 0.9;
   background-attachment: fixed;
@@ -17,16 +16,14 @@
 
 @media (max-width: 767px) {
   #content-jumb {
-    padding-top: 20% !important;
+    padding-top: 15% !important;
     padding-bottom: 20% !important;
     text-align: center;
-    padding-left: 11% !important;
+    position: absolute !important;
+    transform: translate(12%, 0px);
   }
   #img-profile {
     display: none;
-  }
-  .btn-contactMe {
-    margin-top: 100%;
   }
 }
 
@@ -40,11 +37,11 @@
   padding-top: 7%;
 }
 
-.jumbotron p span {
+.jumbotron .tigline span {
   background-color: rgba(255, 255, 255, 0.4);
   transition: all 0.1s ease;
 }
-.jumbotron p {
+.jumbotron span {
   transition: all 0.1s ease;
   font-size: calc(1px + 1.5vw);
 }

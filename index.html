@@ -81,22 +81,19 @@
                 Hi!, I'am <br />
                 Haris Nurdiansyah
               </h1>
-              <p class="lead lh-lg">
-                <span class="px-1 rounded"
-                  >Web Developer | Full Stack Developer | Designer
+              <div class="tigline">
+                <span class="lead lh-lg px-1 rounded">
                 </span>
-                <br />
-                I create custom website to help business do better, and you can
-                invite me to build a project together.
-                <br />
-
-                <a
-                  href="#contact"
-                  class="text-white btn-contactMe"
-                  style="margin-top: 15px !important"
-                  >CONTACT ME <i class="bi bi-arrow-down"></i
-                ></a>
-              </p>
+              </div>
+              <div class="mb-3 text">
+                <span class="lead lh-lg">
+                  I create custom website to help business do better, and you can invite me to build a project together.
+                </span>
+              </div>
+              <div id="btn-contact">
+                <a href="#contact" class="text-white btn-contactMe">CONTACT ME <i class="bi bi-arrow-down"></i
+                  ></a>
+              </div>
             </div>
             <div class="col-md-4" id="img-profile">
               <img
@@ -301,7 +298,7 @@
         <div class="row justify-content-center">
           <div class="col-md-10">
             <form>
-              <div class="mb-3">
+              <div class="mb-3 element-input">
                 <label for="name" class="form-label fw-bold" style="font-family: 'Spectral', serif !important;">Yoru Name:</label>
                 <input
                   type="text"
@@ -311,15 +308,15 @@
                   placeholder="Enter your name..."
                 />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 element-input">
                 <label for="email" class="form-label fw-bold" style="font-family: 'Spectral', serif !important;">Your Email: </label>
                 <input type="email" class="form-control" id="email" placeholder="Enter your email" />
               </div>
-              <div class="mb-3">
+              <div class="mb-3 element-input">
                 <label for="message" class="form-label fw-bold" style="font-family: 'Spectral', serif !important;">Message:</label>
                 <textarea class="form-control" id="message" rows="3" placeholder="Enter message here.."></textarea>
               </div>
-              <button type="submit" class="btn btn-dark fw-bold" style="width: 100%;border-radius: 20px;">Send</button>
+              <button type="submit" class="btn btn-dark fw-bold element-input" style="width: 100%;border-radius: 20px;">Send</button>
             </form>
           </div>
         </div>
@@ -365,6 +362,21 @@
 
     <!-- stats.js -->
     <script src="js/lib/stats.js"></script>
+
+    <!-- GSAP JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      
+      gsap.to(".tigline span", {duration: 3, text: "Web Developer | Full Stack Developer | Designer", delay: 1});
+      gsap.from('.navbar', {duration: 1, y: '-100%', opacity: 0, ease: 'bounce'});
+      gsap.from('.jumbotron img', {duration: 1, y:-100, opacity: 0, ease: 'back', delay: 0.5});
+      gsap.from('.jumbotron h1', {duration: 1, y: -100, opacity: 0, ease: 'back', delay: 0.5});
+      gsap.from('.text', {duration: 1.5, x: -100, opacity: 0, delay: 2, ease: 'elastic'});
+      gsap.from('#btn-contact', {duration: 1.5, x: -100, opacity: 0, delay: 2.5, ease: 'bounce'});
+      // {}
+    </script>
 
     <!-- MyScript -->
     <script src="js/myScript.js"></script>
