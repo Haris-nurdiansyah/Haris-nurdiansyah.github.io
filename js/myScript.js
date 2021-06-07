@@ -1,3 +1,34 @@
+// google sheet portfolio contact form
+const scriptURL = 'https://script.google.com/macros/s/AKfycbxTVm2oMLTUStSpJWQDZ2fxAw38_9HpMztn0s6E9vp5d_JrVS6I1yHqXs1w2HDLRifn4g/exec'
+const form = document.forms['portfolio-contact-form'];
+const btnKirim = document.querySelector('.btn-kirim');
+const btnLoading = document.querySelector('.btn-loading');
+const myAlert = document.querySelector('.my-alert');
+
+
+form.addEventListener('submit', e => {
+  e.preventDefault()
+
+  // ketika tombol kirim di klik hilangkan tombol kirim tampilkan tombol login
+  btnKirim.classList.toggle('d-none');
+  btnLoading.classList.toggle('d-none');
+  
+  // fetch data
+  fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+  .finally(() => {
+    // ketika proses succes, tampilkan pesan alert
+    myAlert.classList.toggle('d-none');
+    // ketika proses selesai tampilkan tombol kirim hilangkan tombol loading
+    btnKirim.classList.toggle('d-none');
+    btnLoading.classList.toggle('d-none');
+    // hilangkan isi form
+    form.reset(); 
+  })
+  .then(response => console.log('Success!', response))
+  .catch(error => console.error('Error!', error.message))
+})
+
+
 // function for resize brand
 function actionBrandonScroll(brand, scroll) {
   if (scroll <= 0) {

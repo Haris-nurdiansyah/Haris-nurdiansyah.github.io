@@ -297,26 +297,33 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-10">
-            <form>
+            <!-- alert -->
+            <div class="alert alert-success alert-dismissible fade show my-alert d-none" role="alert">
+              <strong>Terimakasih!</strong> Pesan anda telah kami terima..
+              <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+            <form name="portfolio-contact-form">
               <div class="mb-3 element-input">
                 <label for="name" class="form-label fw-bold" style="font-family: 'Spectral', serif !important;">Yoru Name:</label>
-                <input
-                  type="text"
-                  class="form-control"
-                  id="name"
-                  aria-describedby="name"
-                  placeholder="Enter your name..."
+                <input type="text" class="form-control" id="name" aria-describedby="name" name="nama" placeholder="Enter your name..."
                 />
               </div>
               <div class="mb-3 element-input">
                 <label for="email" class="form-label fw-bold" style="font-family: 'Spectral', serif !important;">Your Email: </label>
-                <input type="email" class="form-control" id="email" placeholder="Enter your email" />
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" />
               </div>
               <div class="mb-3 element-input">
                 <label for="message" class="form-label fw-bold" style="font-family: 'Spectral', serif !important;">Message:</label>
-                <textarea class="form-control" id="message" rows="3" placeholder="Enter message here.."></textarea>
+                <textarea class="form-control" id="message" rows="3" name="pesan" placeholder="Enter message here.."></textarea>
               </div>
-              <button type="submit" class="btn btn-dark fw-bold element-input" style="width: 100%;border-radius: 20px;">Send</button>
+
+              <button type="submit" class="btn btn-dark fw-bold element-input btn-kirim" style="width: 100%;border-radius: 20px;">Send</button>
+
+              <!-- btn loading -->
+              <button class="btn btn-dark fw-bold btn-loading d-none" type="button" style="width: 100%;border-radius: 20px;" disabled>
+                <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                Loading...
+              </button>
             </form>
           </div>
         </div>
@@ -375,6 +382,7 @@
       gsap.from('.jumbotron h1', {duration: 1, y: -100, opacity: 0, ease: 'back', delay: 0.5});
       gsap.from('.text', {duration: 1.5, x: -100, opacity: 0, delay: 2, ease: 'elastic'});
       gsap.from('#btn-contact', {duration: 1.5, x: -100, opacity: 0, delay: 2.5, ease: 'bounce'});
+      gsap.from('#about h2', {duration: 1, y: -50, opacity: 0, delay: 2.5, ease: 'elastic'});
       // {}
     </script>
 
