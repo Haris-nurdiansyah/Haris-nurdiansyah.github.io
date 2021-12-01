@@ -32,9 +32,9 @@
   font-size: calc(1rem + 2.5vw);
   transition: all 0.1s ease;
 }
-#content-jumb { 
+#content-jumb {
   position: absolute;
-  padding-top: 7%;
+  padding-top: 5.5%;
 }
 
 .jumbotron .tigline span {
