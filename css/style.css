@@ -141,6 +141,9 @@ h3 {
   .css-img {
     width: 44px !important;
   }
+  .img-skills {
+    height: 8rem!important;
+  }
 }
 @media (max-width: 1183px) and (min-width: 767px) {
   .php-img {
@@ -156,8 +159,12 @@ h3 {
   .css-img {
     width: 57px !important;
   }
+  .img-skills {
+    height: 9rem!important;
+  }
 }
 .img-skills {
+  height: 12rem;
   opacity: 0;
   transform: translate(-100px, -100px);
   transition: all 1s ease;
