@@ -4,6 +4,9 @@ const form = document.forms['portfolio-contact-form'];
 const btnKirim = document.querySelector('.btn-kirim');
 const btnLoading = document.querySelector('.btn-loading');
 const myAlert = document.querySelector('.my-alert');
+const myModal = new bootstrap.Modal(document.getElementById('exampleModal'), {
+  keyboard: false
+})
 
 
 form.addEventListener('submit', e => {
@@ -130,4 +133,9 @@ window.addEventListener("scroll", function () {
   returnTop(btnTop, wScroll);
 });
 
+function showModal(e) {
+  // const textDetail = e.parentNode.querySelector('.detail').innerHTML;
+  // console.log(textDetail);
+  // myModal.show();
+}
 // [0]
