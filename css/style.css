@@ -219,4 +219,8 @@ hr {
 .top a.muncul {
   opacity: 1;
 }
+
+.card-text {
+  font-size: 12px!important;
+}
 /* {} */
